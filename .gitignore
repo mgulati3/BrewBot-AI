@@ -1,2 +1,19 @@
-python_code/.env
-.venv
+# Virtual environments
+.venv/
+venv/
+
+# Environment files (API keys, tokens, etc)
+**/.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# macOS metadata
+.DS_Store
+
+# VS Code workspace settings (if you check those in)
+.vscode/
