@@ -1,22 +1,23 @@
 from agents import (GuardAgent,
                     ClassificationAgent, 
                     DetailsAgent,
-                    AgentProtocol
+                    AgentProtocol, 
+                    RecommendationAgent
                 )
 from typing import Dict
 import os
 
 def main():
-    pass
-
-if __name__ == "__main__":
     guard_agent = GuardAgent()
     classification_agent = ClassificationAgent()
-
-    agent_dict: Dict[str, AgentProtocol] = {
-        "details_agent": DetailsAgent()
+    recommendation_agent = RecommendationAgent('recommendation_objects/apriori_recommendations.json',
+                                                    'recommendation_objects/popularity_recommendation.csv'
+                                                    )
+    agent_dict: dict[str, AgentProtocol] = {
+        "details_agent": DetailsAgent(),
+        "recommendation_agent": recommendation_agent
     }
-
+ 
     messages = []
     while True:
         # os.system('cls' if os.name == 'nt' else 'clear')
@@ -45,3 +46,8 @@ if __name__ == "__main__":
         response = agent.get_response(messages)
 
         messages.append(response)
+
+
+if __name__ == "__main__":
+    main()
+    
