@@ -2,7 +2,8 @@ from agents import (GuardAgent,
                     ClassificationAgent, 
                     DetailsAgent,
                     AgentProtocol, 
-                    RecommendationAgent
+                    RecommendationAgent,
+                    OrderTakingAgent
                 )
 from typing import Dict
 import os
@@ -15,12 +16,13 @@ def main():
                                                     )
     agent_dict: dict[str, AgentProtocol] = {
         "details_agent": DetailsAgent(),
-        "recommendation_agent": recommendation_agent
+        "recommendation_agent": recommendation_agent,
+        "order_taking_agent": OrderTakingAgent(recommendation_agent)
     }
  
     messages = []
     while True:
-        # os.system('cls' if os.name == 'nt' else 'clear')
+        os.system('cls' if os.name == 'nt' else 'clear')
 
         print("\n\n Print Messages ............")
         for message in messages:
@@ -39,7 +41,6 @@ def main():
         # Get Claasification Agent's response
         classification_agent_response = classification_agent.get_response(messages)
         chosen_agent = classification_agent_response["memory"]["classification_decision"]
-        print(f"Chosen Agent: {chosen_agent}")
 
         # Get the chosen agent's response
         agent = agent_dict[chosen_agent]
@@ -50,4 +51,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    

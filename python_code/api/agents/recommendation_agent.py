@@ -116,7 +116,7 @@ class RecommendationAgent():
         }
         return dict_output
     
-    def get_recomemndation_from_order(self, messages, order):
+    def get_recommendation_from_order(self, messages, order):
         messages = deepcopy(messages)
         products = []
         for product in order: 
