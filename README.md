@@ -102,11 +102,3 @@ A full-stack AI–powered coffee shop application featuring a modular, agent-dri
   - Expo Go (Android/iOS) on physical device
 
 ---
-
-## Installation & Setup
-
-### 1. Clone Repository
-
-```bash
-git clone https://github.com/yourusername/BrewBotAI.git
-cd BrewBotAI
