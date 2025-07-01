@@ -1,6 +1,6 @@
 # BrewBot AI Coffee Shop
 
-A full-stack AI–powered coffee shop application featuring a modular, agent-driven Python backend (deployed on RunPod) and a React Native (Expo) mobile frontend. Users can chat with the bot to browse the menu, place orders, receive personalized recommendations, and complete a simulated checkout—all in a warm, coffee-shop aesthetic.
+A full-stack AI–powered coffee shop application featuring a modular, agent-driven Python backend (deployed on RunPod) and a React Native (Expo) mobile frontend. Users can chat with the bot to browse the menu, place orders, receive personalized recommendations, and complete a simulated checkout all in a warm, coffee-shop aesthetic.
 
 ---
 
